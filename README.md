@@ -27,7 +27,7 @@ CampGround Master is a web application that allows users to view, create, and re
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Aditya122003/CampGround-Master-Updated-.git
+    git clone https://github.com/Sarvesh2025/CampGroundMaster.git
     cd YelpCamp
     ```
 2. Install dependencies
