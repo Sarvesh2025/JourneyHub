@@ -23,7 +23,8 @@ export default function NewCampgroundPage() {
   async function uploadFile(file) {
     const form = new FormData();
     form.append('file', file);
-    const res = await fetch('/api/uploads', { method: 'POST', body: form });
+    const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+    const res = await fetch(`${base}/api/uploads`, { method: 'POST', body: form });
     const json = await res.json();
     if (!res.ok || !json.ok) throw new Error(json.error || 'Upload failed');
     return { url: json.url, filename: json.filename };
@@ -43,7 +44,8 @@ export default function NewCampgroundPage() {
         uploads.push(up);
       }
       const payload = { title, location, price: Number(price), description, images: uploads };
-      const res = await fetch('/api/campgrounds', {
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      const res = await fetch(`${base}/api/campgrounds`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload)

@@ -27,7 +27,8 @@ export default function ProfilePage() {
 
   const fetchUserStats = async () => {
     try {
-      const res = await fetch('/api/users/stats');
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      const res = await fetch(`${base}/api/users/stats`);
       const data = await res.json();
       if (data.ok) {
         setStats(data.stats);

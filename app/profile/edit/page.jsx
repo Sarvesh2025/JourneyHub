@@ -51,7 +51,8 @@ export default function EditProfilePage() {
 
   const fetchUserAvatar = async () => {
     try {
-      const res = await fetch('/api/users/stats');
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      const res = await fetch(`${base}/api/users/stats`);
       const data = await res.json();
       if (data.ok && data.user?.avatar) {
         setCurrentAvatar(data.user.avatar);
@@ -113,7 +114,8 @@ export default function EditProfilePage() {
         updateData.newPassword = formData.newPassword;
       }
 
-      const res = await fetch('/api/users/update', {
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      const res = await fetch(`${base}/api/users/update`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updateData),
@@ -191,8 +193,9 @@ export default function EditProfilePage() {
     try {
       const formData = new FormData();
       formData.append('avatar', avatar);
-
-      const res = await fetch('/api/users/avatar', {
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      
+      const res = await fetch(`${base}/api/users/avatar`, {
         method: 'POST',
         body: formData,
       });
@@ -234,7 +237,8 @@ export default function EditProfilePage() {
     setMessage({ type: '', text: '' });
 
     try {
-      const res = await fetch('/api/users/avatar', {
+      const base = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+      const res = await fetch(`${base}/api/users/avatar`, {
         method: 'DELETE',
       });
 
