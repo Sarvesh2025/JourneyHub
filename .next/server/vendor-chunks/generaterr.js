@@ -1,0 +1,24 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/generaterr";
+exports.ids = ["vendor-chunks/generaterr"];
+exports.modules = {
+
+/***/ "(rsc)/./node_modules/generaterr/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/generaterr/index.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* jshint expr: true */\nvar util = __webpack_require__(/*! util */ \"util\");\n\nmodule.exports = function(name, parameters, options) {\n  options = options || {};\n  options.captureStackTrace = options.captureStackTrace === undefined ? true : false;\n  options.inherits = options.inherits || Error;\n\n  var ctor = function() {\n    if (!(this instanceof ctor)) {\n      var constructorArgs = Array.prototype.slice.call(arguments);\n      constructorArgs.unshift(ctor);\n\n      return new (ctor.bind.apply(ctor, constructorArgs))();\n    }\n\n    options.inherits.call(this);\n\n    if (options.captureStackTrace) {\n      Error.captureStackTrace && Error.captureStackTrace(this, arguments.callee);\n    }\n\n    copy(parameters, this);\n\n    var msg = arguments[0];\n    if (msg) {\n      var args = Array.prototype.slice.call(arguments);\n\n      if (args.length > 1 && typeof args[args.length - 1] == 'object') {\n        var instanceParams = args.pop();\n\n        copy(instanceParams, this);\n      }\n\n      this.message = util.format.apply(util, args);\n    }\n\n    this.name = name;\n  };\n\n  util.inherits(ctor, options.inherits);\n\n  return ctor;\n};\n\nfunction copy(from, to) {\n  if (from) {\n    for (var key in from) {\n      if (from.hasOwnProperty(key)) {\n        to[key] = from[key];\n      }\n    }\n  }\n\n  return to;\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvZ2VuZXJhdGVyci9pbmRleC5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBLFdBQVcsbUJBQU8sQ0FBQyxrQkFBTTs7QUFFekI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly95ZWxwY2FtcC8uL25vZGVfbW9kdWxlcy9nZW5lcmF0ZXJyL2luZGV4LmpzPzU0ZjgiXSwic291cmNlc0NvbnRlbnQiOlsiLyoganNoaW50IGV4cHI6IHRydWUgKi9cbnZhciB1dGlsID0gcmVxdWlyZSgndXRpbCcpO1xuXG5tb2R1bGUuZXhwb3J0cyA9IGZ1bmN0aW9uKG5hbWUsIHBhcmFtZXRlcnMsIG9wdGlvbnMpIHtcbiAgb3B0aW9ucyA9IG9wdGlvbnMgfHwge307XG4gIG9wdGlvbnMuY2FwdHVyZVN0YWNrVHJhY2UgPSBvcHRpb25zLmNhcHR1cmVTdGFja1RyYWNlID09PSB1bmRlZmluZWQgPyB0cnVlIDogZmFsc2U7XG4gIG9wdGlvbnMuaW5oZXJpdHMgPSBvcHRpb25zLmluaGVyaXRzIHx8IEVycm9yO1xuXG4gIHZhciBjdG9yID0gZnVuY3Rpb24oKSB7XG4gICAgaWYgKCEodGhpcyBpbnN0YW5jZW9mIGN0b3IpKSB7XG4gICAgICB2YXIgY29uc3RydWN0b3JBcmdzID0gQXJyYXkucHJvdG90eXBlLnNsaWNlLmNhbGwoYXJndW1lbnRzKTtcbiAgICAgIGNvbnN0cnVjdG9yQXJncy51bnNoaWZ0KGN0b3IpO1xuXG4gICAgICByZXR1cm4gbmV3IChjdG9yLmJpbmQuYXBwbHkoY3RvciwgY29uc3RydWN0b3JBcmdzKSkoKTtcbiAgICB9XG5cbiAgICBvcHRpb25zLmluaGVyaXRzLmNhbGwodGhpcyk7XG5cbiAgICBpZiAob3B0aW9ucy5jYXB0dXJlU3RhY2tUcmFjZSkge1xuICAgICAgRXJyb3IuY2FwdHVyZVN0YWNrVHJhY2UgJiYgRXJyb3IuY2FwdHVyZVN0YWNrVHJhY2UodGhpcywgYXJndW1lbnRzLmNhbGxlZSk7XG4gICAgfVxuXG4gICAgY29weShwYXJhbWV0ZXJzLCB0aGlzKTtcblxuICAgIHZhciBtc2cgPSBhcmd1bWVudHNbMF07XG4gICAgaWYgKG1zZykge1xuICAgICAgdmFyIGFyZ3MgPSBBcnJheS5wcm90b3R5cGUuc2xpY2UuY2FsbChhcmd1bWVudHMpO1xuXG4gICAgICBpZiAoYXJncy5sZW5ndGggPiAxICYmIHR5cGVvZiBhcmdzW2FyZ3MubGVuZ3RoIC0gMV0gPT0gJ29iamVjdCcpIHtcbiAgICAgICAgdmFyIGluc3RhbmNlUGFyYW1zID0gYXJncy5wb3AoKTtcblxuICAgICAgICBjb3B5KGluc3RhbmNlUGFyYW1zLCB0aGlzKTtcbiAgICAgIH1cblxuICAgICAgdGhpcy5tZXNzYWdlID0gdXRpbC5mb3JtYXQuYXBwbHkodXRpbCwgYXJncyk7XG4gICAgfVxuXG4gICAgdGhpcy5uYW1lID0gbmFtZTtcbiAgfTtcblxuICB1dGlsLmluaGVyaXRzKGN0b3IsIG9wdGlvbnMuaW5oZXJpdHMpO1xuXG4gIHJldHVybiBjdG9yO1xufTtcblxuZnVuY3Rpb24gY29weShmcm9tLCB0bykge1xuICBpZiAoZnJvbSkge1xuICAgIGZvciAodmFyIGtleSBpbiBmcm9tKSB7XG4gICAgICBpZiAoZnJvbS5oYXNPd25Qcm9wZXJ0eShrZXkpKSB7XG4gICAgICAgIHRvW2tleV0gPSBmcm9tW2tleV07XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgcmV0dXJuIHRvO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/generaterr/index.js\n");
+
+/***/ })
+
+};
+;

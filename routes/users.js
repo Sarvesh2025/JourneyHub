@@ -4,8 +4,7 @@ const passport = require('passport');
 const catchAsync = require('../utils/catchAsync');
 const User = require('../models/user');
 const users = require('../controllers/users');
-const { storeReturnTo } = require('../middleware');
-
+const { storeReturnTo } = require('../express-middleware');
 
 router.route('/register')
     .get(users.renderRegister)
